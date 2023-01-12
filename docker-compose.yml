@@ -1,18 +1,19 @@
 version: "3.7"
 
 services:
-  client:
-    container_name: client
-    image: client
-    build: ./client
+  front:
+    container_name: front
+    image: front
+    build: ./front
     volumes:
-      - ./client:/Localib/client
+      - ./front:/Localib/front
     ports:
       - 3000:3000
-
-  api:
-    container_name: api
-    build: ./api
+    depends_on:
+      - back
+  back:
+    container_name: back
+    build: ./back
     restart: always
     ports:
       - 8080:8080
