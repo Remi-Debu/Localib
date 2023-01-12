@@ -1,24 +1,9 @@
-# ECF Back-End Localib
+# Back-End
 
 ## Description
-Application de location de véhicule.
-
-
-## Prérequis
-- Java 11+
-- Docker Desktop
-- Postman
-- Spring
--  IDE (IntelliJ, Eclipse)
+APi rest, gestion de locataires, de véhicules et de locations.
 
 ## Installation
-
-### Base de données :
-
-Lancer la commande :
-```
-docker-compose up -d
-```
 
 ### Lancement de l'application sans IDE :
 Lancer la commande :
