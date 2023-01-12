@@ -1,0 +1,77 @@
+ .location-details {
+     display: flex;
+     flex-direction: column;
+     width: 90%;
+     margin: 0 auto;
+ }
+
+ .locataire-vehicule {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .locataire {
+    width: 40%;
+     height: 100%;
+     background: #f8f9fa;
+     border: 1px solid #dee2e6;
+     border-radius: 5px;
+
+     padding: 20px 30px;
+ }
+
+ .vehicule {
+     width: 50%;
+     height: 100%;
+     background: #f8f9fa;
+     border: 1px solid #dee2e6;
+     border-radius: 5px;
+     padding: 20px 30px;
+ }
+
+ .location {
+     width: 100%;
+     height: 100%;
+     background: #f8f9fa;
+     border: 1px solid #dee2e6;
+     border-radius: 5px;
+     margin: 20px auto 0 auto;
+     padding: 20px 30px;
+ }
+
+ .columns {
+     display: flex;
+     justify-content: center;
+ }
+
+ .col-1 {
+     margin-right: 30px;
+ }
+
+ .col-2 {
+    margin-right: 30px;
+}
+
+ .title {
+     text-align: center;
+     color: #0d6efd;
+ }
+
+ h3 {
+     margin-left: 0.75rem;
+ }
+
+ .attributs-location {
+     height: 100%;
+     display: flex;
+     justify-content: space-evenly;
+
+ }
+
+ #etat {
+     width: 70%;
+ }
+
+ #type {
+     width: 70%;
+ }

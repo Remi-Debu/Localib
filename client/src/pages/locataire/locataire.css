@@ -1,0 +1,19 @@
+.form-locataire {
+    width: 40%;
+    margin: 0 auto 0 auto;
+    padding: 20px 50px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+}
+
+.champ-locataire {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.submit-locataire { 
+    display: flex;
+    flex-direction: row-reverse;
+}

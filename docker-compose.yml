@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  client:
+    container_name: client
+    image: client
+    build: ./client
+    volumes:
+      - ./client:/Localib/client
+    ports:
+      - 3000:3000
+
+  api:
+    container_name: api
+    build: ./api
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - mongo_db
+
+  mongo_db:
+    container_name: db
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017

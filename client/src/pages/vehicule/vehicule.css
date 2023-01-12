@@ -1,0 +1,47 @@
+.form-vehicule {
+    width: 50%;
+    margin: 0 auto 0 auto;
+    padding: 20px 50px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+}
+
+.champ-vehicule {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.submit-vehicule {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.col1-champ-vehicule {
+    width: 60%;
+}
+
+.col2-champ-vehicule {
+    width: 30%;
+}
+
+.field-radiobutton {
+    margin-bottom: 10px;
+}
+
+#marque {
+    width: 70%;
+}
+
+#modele {
+    width: 70%;
+}
+
+#immatriculation {
+    width: 70%;
+}
+
+#prix {
+    width: 70%;
+}

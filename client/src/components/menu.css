@@ -1,0 +1,22 @@
+.p-menubar {
+    margin: 20px;
+    border-width: 3px;
+    background-color: white;
+    border-color: #0d6efd;
+}
+
+.p-menubar-root-list {
+    margin-left: 3vw !important;
+}
+
+.p-menubar-root-list {
+    width: 100%;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover {
+    background: #0d6efd;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover > .p-menuitem-text {
+    color: white;
+}

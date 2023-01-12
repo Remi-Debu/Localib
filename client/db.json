@@ -1,0 +1,136 @@
+{
+  "vehicules": [
+    {
+      "id": 1,
+      "marque": "Renault",
+      "modele": "Clio",
+      "immatriculation": "123-AB-59",
+      "etat": "B",
+      "prix": 148.54,
+      "disponibilite": "Oui",
+      "type": "Voiture"
+    },
+    {
+      "id": 2,
+      "marque": "Peugeot",
+      "modele": "308",
+      "immatriculation": "852-ZGD-69",
+      "etat": "B",
+      "prix": 751.01,
+      "disponibilite": "Non",
+      "type": "Voiture"
+    },
+    {
+      "id": 3,
+      "marque": "Yamaha",
+      "modele": "R1",
+      "immatriculation": "963-AFS-95",
+      "etat": "C",
+      "prix": 45.99,
+      "disponibilite": "Non",
+      "type": "Moto"
+    },
+    {
+      "id": 1665662911536,
+      "marque": "Kawazaki",
+      "modele": "H2R",
+      "immatriculation": "456-ZR-48",
+      "etat": "D",
+      "prix": 319.85,
+      "disponibilite": "Oui",
+      "type": "Moto"
+    }
+  ],
+  "locataires": [
+    {
+      "id": 1,
+      "nom": "Debu",
+      "prenom": "Remi",
+      "email": "debu.remi@mail.com",
+      "telephone": "0678965245"
+    },
+    {
+      "id": 2,
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "email": "dupontjean@mail.com",
+      "telephone": "0675482564"
+    },
+    {
+      "id": 3,
+      "nom": "Durand",
+      "prenom": "Martin",
+      "email": "durand.martin@mail.com",
+      "telephone": "0675958426"
+    },
+    {
+      "id": 4,
+      "nom": "Test",
+      "prenom": "Test",
+      "email": "testtest@mail.com",
+      "telephone": "0675958753"
+    },
+    {
+      "id": 5,
+      "nom": "jesaispasquoimettre",
+      "prenom": "iciaussi",
+      "email": "blablabla@mail.com",
+      "telephone": "9876543210"
+    },
+    {
+      "id": 1665652663578,
+      "nom": "Leclercq",
+      "prenom": "Martin",
+      "email": "leclercqmartin@gmail.com",
+      "telephone": "0685236974"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1665409826440,
+      "vehicule": {
+        "id": 1165418036748,
+        "marque": "Renault",
+        "modele": "Clio",
+        "immatriculation": "123-AB-59",
+        "etat": "A",
+        "prix": 148.54,
+        "disponibilite": "Oui",
+        "type": "Voiture"
+      },
+      "locataire": {
+        "id": 1665408874010,
+        "nom": "Debu",
+        "prenom": "Remi",
+        "email": "debu.remi@gmail.com",
+        "telephone": "0678965245"
+      },
+      "dateDebut": "01/08/2022",
+      "dateFin": "05/09/2022",
+      "cout": 361.72
+    },
+    {
+      "id": 1665409826441,
+      "vehicule": {
+        "id": 1365418036748,
+        "marque": "Yamaha",
+        "modele": "R1",
+        "immatriculation": "963-AFS-95",
+        "etat": "C",
+        "prix": 45.99,
+        "disponibilite": "Oui",
+        "type": "Moto"
+      },
+      "locataire": {
+        "id": 1665408874011,
+        "nom": "Dupont",
+        "prenom": "Jean",
+        "email": "dupontjean@gmail.com",
+        "telephone": "0675482564"
+      },
+      "dateDebut": "04/10/2022",
+      "dateFin": "24/11/2022",
+      "cout": 450.54
+    }
+  ]
+}
