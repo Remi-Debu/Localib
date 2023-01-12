@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "75983b74-42a5-4f88-9faa-58dfd253514d",
+		"name": "localib",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16295488"
+	},
+	"item": [
+		{
+			"name": "locataire",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{locataires}}",
+							"host": [
+								"{{locataires}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"testNom\",\r\n    \"prenom\": \"testPre\",\r\n    \"dateDeNaissance\": \"2000-01-01\",\r\n    \"email\": \"test.mail@mail.com\",\r\n    \"telephone\": \"0645789621\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{locataires}}",
+							"host": [
+								"{{locataires}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{locataires}}/63c002b7073ccb799e908a21",
+							"host": [
+								"{{locataires}}"
+							],
+							"path": [
+								"63c002b7073ccb799e908a21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"63c002b7073ccb799e908a21\",\r\n    \"nom\": \"testNom update\",\r\n    \"prenom\": \"testPre update\",\r\n    \"dateDeNaissance\": \"2000-01-01\",\r\n    \"email\": \"test.mail@mail.com\",\r\n    \"telephone\": \"0645789629\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{locataires}}/63c002b7073ccb799e908a21",
+							"host": [
+								"{{locataires}}"
+							],
+							"path": [
+								"63c002b7073ccb799e908a21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{locataires}}/63a2cc457ac6a93a3990e921",
+							"host": [
+								"{{locataires}}"
+							],
+							"path": [
+								"63a2cc457ac6a93a3990e921"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{locataires}}/nom/testNom",
+							"host": [
+								"{{locataires}}"
+							],
+							"path": [
+								"nom",
+								"testNom"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vehicule",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{vehicule}}",
+							"host": [
+								"{{vehicule}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"marque\": \"Audi\",\r\n    \"modele\": \"A1\",\r\n    \"immatriculation\": \"aze12313\",\r\n    \"etat\": \"A\",\r\n    \"prixJournee\": 45.85,\r\n    \"disponibilite\": true,\r\n    \"type\": \"Voiture\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{vehicule}}",
+							"host": [
+								"{{vehicule}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{vehicule}}/63c0034d073ccb799e908a22",
+							"host": [
+								"{{vehicule}}"
+							],
+							"path": [
+								"63c0034d073ccb799e908a22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"63c00399073ccb799e908a23\",\r\n    \"marque\": \"marque2\",\r\n    \"modele\": \"modele2\",\r\n    \"immatriculation\": \"aze12313\",\r\n    \"etat\": \"C\",\r\n    \"prixJournee\": 45.85,\r\n    \"disponibilite\": true,\r\n    \"type\": \"Moto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{vehicule}}/63c00399073ccb799e908a23",
+							"host": [
+								"{{vehicule}}"
+							],
+							"path": [
+								"63c00399073ccb799e908a23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{vehicule}}/63c0034d073ccb799e908a22",
+							"host": [
+								"{{vehicule}}"
+							],
+							"path": [
+								"63c0034d073ccb799e908a22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByDisponibilite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{vehicule}}/disponibilite/true",
+							"host": [
+								"{{vehicule}}"
+							],
+							"path": [
+								"disponibilite",
+								"true"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByEtat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{vehicule}}/etat/A",
+							"host": [
+								"{{vehicule}}"
+							],
+							"path": [
+								"etat",
+								"A"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByMarque",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{vehicule}}/marque/Audi",
+							"host": [
+								"{{vehicule}}"
+							],
+							"path": [
+								"marque",
+								"Audi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByModele",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{vehicule}}/modele/A1",
+							"host": [
+								"{{vehicule}}"
+							],
+							"path": [
+								"modele",
+								"A1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByImmatriculation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{vehicule}}/immatriculation/aze12313",
+							"host": [
+								"{{vehicule}}"
+							],
+							"path": [
+								"immatriculation",
+								"aze12313"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{vehicule}}/type/Voiture",
+							"host": [
+								"{{vehicule}}"
+							],
+							"path": [
+								"type",
+								"Voiture"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPrixSup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{vehicule}}/prixSuperieur?prix=45.85",
+							"host": [
+								"{{vehicule}}"
+							],
+							"path": [
+								"prixSuperieur"
+							],
+							"query": [
+								{
+									"key": "prix",
+									"value": "45.85"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "location",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{locations}}",
+							"host": [
+								"{{locations}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{locations}}/63c00b5ba5f32e38aa5b07cc",
+							"host": [
+								"{{locations}}"
+							],
+							"path": [
+								"63c00b5ba5f32e38aa5b07cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{locations}}/63c00b5ba5f32e38aa5b07cc",
+							"host": [
+								"{{locations}}"
+							],
+							"path": [
+								"63c00b5ba5f32e38aa5b07cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dateDebut\": \"2000-01-01\",\r\n    \"dateFin\": \"2000-12-12\",\r\n    \"locataire\": {\r\n        \"id\": \"63c00a04a5f32e38aa5b07cb\",\r\n        \"nom\": \"testNom\",\r\n        \"prenom\": \"testPre\",\r\n        \"dateDeNaissance\": \"2000-01-01\",\r\n        \"email\": \"test.mail@mail.com\",\r\n        \"telephone\": \"0645789621\"\r\n   },\r\n   \"vehicule\": {\r\n       \"id\": \"63c00873a5f32e38aa5b07c9\",\r\n       \"marque\": \"Audi\",\r\n       \"modele\": \"A1\",\r\n       \"immatriculation\": \"aze12313\",\r\n       \"etat\": \"A\",\r\n       \"prixJournee\": 45.85,\r\n       \"disponibilite\": true,\r\n       \"type\": \"Voiture\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{locations}}",
+							"host": [
+								"{{locations}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
