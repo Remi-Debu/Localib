@@ -2,6 +2,7 @@ import { IonButton, IonButtons, IonContent, IonDatetime, IonDatetimeButton, IonH
 import React, { useEffect, useRef, useState } from 'react'
 import Locataire from '../../locataires/models/locataire';
 import LocataireService from '../../locataires/services/locataire-service';
+import Location from '../../locations/models/location';
 import LocationService from '../../locations/services/location-service';
 import Vehicule from '../models/vehicule';
 
@@ -27,8 +28,32 @@ const LouerModal: React.FC<Props> = ({
 
     useEffect(() => {
         LocataireService.getLocataires().then(locataires => setLocataires(locataires));
-        // calculCout();
+        calculCout();
     }, [dateDebut, dateFin]);
+
+    /**
+     * Si dateDebut, dateFin et vehicule sont définis, 
+     * calcule la différence de jours entre dateDebut et dateFin, 
+     * multiplie cette différence par le prix par jour du véhicule 
+     * et définit le résultat sur la variable cout.
+     */
+    const calculCout = () => {
+        let result = 0;
+
+        if (dateDebut && dateFin && vehicule) {
+            if (dateDebut <= dateFin) {
+                let date1 = new Date(dateDebut.toString());
+                let date2 = new Date(dateFin.toString());
+
+                let DifferenceInTime = date2.getTime() - date1.getTime();
+                let DifferenceInDays = (DifferenceInTime / (1000 * 3600 * 24)) + 1;
+
+                result = vehicule.prixJournee * DifferenceInDays;
+                result = parseFloat(result.toFixed(2));
+            }
+        }
+        setCout(result);
+    }
 
     const valider = () => {
         modal.current?.dismiss(input.current?.value, 'confirm');
@@ -37,10 +62,13 @@ const LouerModal: React.FC<Props> = ({
 
     const onWillDismiss = (event: any) => {
         if (event.detail.role === 'confirm' && locataire) {
-            const id: number = new Date().getTime();
-            // let louer: Location = new Location(id, vehicule, locataire, dateDebut, dateFin, cout);
+            let formatDateDebut: string = dateDebut.substring(0, 10);
+            let formatDateFin: string = dateFin.substring(0, 10);
 
-            // LocationService.addLocation(louer);
+            let louer: Location = new Location(locataire, vehicule, formatDateDebut, formatDateFin);
+            console.log(louer);
+
+            LocationService.addLocation(louer);
         }
     }
 
