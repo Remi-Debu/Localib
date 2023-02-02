@@ -29,7 +29,7 @@ const LocationCard: React.FC<Props> = ({ location, openDetailsForm }) => {
 
                     <IonItem>
                         <IonIcon icon={logoEuro}></IonIcon>
-                        <IonLabel>{location.prixTotal}</IonLabel>
+                        <IonLabel>{(location.prixTotal)?.toFixed(2)}</IonLabel>
                     </IonItem>
                 </IonList>
             </IonCardContent>

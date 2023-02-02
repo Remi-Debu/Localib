@@ -44,7 +44,7 @@ const LocationDetailsModal: React.FC<Props> = ({ location, showModal, setShowMod
 
                 <IonItem>
                     <IonLabel position="stacked">Coût :</IonLabel>
-                    <IonInput readonly={true} type="text" value={location?.prixTotal} />
+                    <IonInput readonly={true} type="text" value={(location?.prixTotal)?.toFixed(2)} />
                 </IonItem>
 
                 <IonHeader style={{ marginTop: "30px" }}>Locataire :</IonHeader>
