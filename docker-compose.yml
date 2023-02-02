@@ -8,7 +8,7 @@ services:
     volumes:
       - ./front:/Localib/front
     ports:
-      - 3000:3000
+      - 3001:3000
     depends_on:
       - back
   back:
@@ -19,6 +19,17 @@ services:
       - 8080:8080
     depends_on:
       - mongo_db
+
+  mobile:
+    container_name: mobile
+    image: mobile
+    build: ./mobile
+    volumes:
+      - ./mobile:/Localib/mobile
+    ports:
+      - 3000:3000
+    depends_on:
+      - back
 
   mongo_db:
     container_name: db
