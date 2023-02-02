@@ -55,19 +55,28 @@ const LouerModal: React.FC<Props> = ({
         setCout(result);
     }
 
+    /**
+     * Cette fonction ferme la modale en appelant la méthode dismiss sur l'objet modal.current avec les arguments input.current?.value et confirm. 
+     * Elle met également à jour le state "showModal" en le mettant à false.
+     */
     const valider = () => {
         modal.current?.dismiss(input.current?.value, 'confirm');
         setShowModalLocation(false);
     }
 
+    /**
+     * Cette fonction gère les événements de fermeture de la modale. 
+     * Si le rôle de l'événement déclenché est "confirm" et "locataire" existe, 
+     * les informations de la location sont mises à jour avec ses valeurs. 
+     * Ensuite, la fonction "addLocation" est appelée.
+     * @param event 
+     */
     const onWillDismiss = (event: any) => {
         if (event.detail.role === 'confirm' && locataire) {
             let formatDateDebut: string = dateDebut.substring(0, 10);
             let formatDateFin: string = dateFin.substring(0, 10);
 
             let louer: Location = new Location(locataire, vehicule, formatDateDebut, formatDateFin);
-            console.log(louer);
-
             LocationService.addLocation(louer);
         }
     }
@@ -80,6 +89,12 @@ const LouerModal: React.FC<Props> = ({
         setShowModalLocation(false);
     }
 
+    /**
+     * Cette fonction prend une liste de locataires et la transforme en une liste d'options pour le sélecteur. 
+     * Elle passe ces options à la méthode "present" avec une configuration pour les boutons "Cancel" et "Valider". 
+     * Lorsque l'utilisateur clique sur le bouton "Valider", la fonction "handler" est déclenchée avec la valeur sélectionnée, 
+     * qui est passée à la fonction "selectLocat" pour sélectionner le locataire correspondant.
+     */
     const openPicker = async () => {
         const options = locataires.map(loc => {
             return { text: loc.email, value: loc.id };
@@ -103,8 +118,14 @@ const LouerModal: React.FC<Props> = ({
                 },
             ],
         });
-    };
+    }
 
+    /**
+     * Cette fonction sélectionne un locataire en utilisant son identifiant (id). 
+     * appelle "getLocataire" de l'objet "LocataireService" pour obtenir le locataire correspondant à l'identifiant donné. 
+     * Si la requête est réussie, elle utilise la fonction "setLocataire" pour mettre à jour l'état avec le locataire retourné.
+     * @param id 
+     */
     const selectLocat = (id: number) => {
         LocataireService.getLocataire(id).then((loc) => {
             setLocataire(loc);
