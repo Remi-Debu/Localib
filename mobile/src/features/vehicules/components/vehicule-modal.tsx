@@ -81,6 +81,13 @@ const VehiculeModal: React.FC<Props> = ({
             vehicule.disponibilite = disponibilite;
             vehicule.type = type;
             isEditForm ? updateVehicule(event, vehicule) : addVehicule(event, vehicule);
+            setMarque("");
+            setModele("");
+            setImmatriculation("");
+            setEtat("");
+            setPrixJournee(0);
+            setDisponibilite("");
+            setType("");
         }
     }
 

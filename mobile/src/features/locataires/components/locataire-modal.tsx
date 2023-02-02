@@ -66,6 +66,10 @@ const LocataireModal: React.FC<Props> = ({
             locataire.email = email;
             locataire.telephone = telephone;
             isEditForm ? updateLocataire(event, locataire) : addLocataire(event, locataire);
+            setNom("");
+            setPrenom("");
+            setEmail("");
+            setTelephone("");
         }
     }
 
