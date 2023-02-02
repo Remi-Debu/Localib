@@ -2,7 +2,9 @@ import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/r
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './core/Menu';
-import GestionVehicules from './features/vehicules/pages/gestion-vehicule';
+import GestionVehicules from './features/vehicules/pages/gestion-vehicules';
+import GestionLocataires from './features/locataires/pages/gestion-locataires';
+import GestionLocations from './features/locations/pages/gestion-locations';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -34,6 +36,8 @@ const App: React.FC = () => {
           <IonRouterOutlet id="main">
             <Redirect exact from="/" to="/page/Vehicules" />
             <Route exact path="/page/Vehicules" component={GestionVehicules} />
+            <Route exact path="/page/Locataires" component={GestionLocataires} />
+            <Route exact path="/page/Locations" component={GestionLocations} />
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
